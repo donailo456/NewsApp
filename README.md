@@ -16,7 +16,7 @@
 # Для запуска
   1. Для запуска проекта можно скачать исходный zip-файл или применить в Xcode Swift Package Manager
 
-  HTTPS: ```https://github.com/donailo456/NewsApp.git``
+  HTTPS: ```https://github.com/donailo456/NewsApp.git```
   
   SSH: ```git@github.com:donailo456/NewsApp.git```
 
