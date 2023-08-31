@@ -9,6 +9,7 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func getNews(complition: @escaping (Result<[Article]?, Error>) -> Void)
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ())
 }
 
 class NetworkService: NetworkServiceProtocol {
@@ -26,7 +27,6 @@ class NetworkService: NetworkServiceProtocol {
             else if let data = data {
                 do {
                     let result = try JSONDecoder().decode(NewsModel.self, from: data)
-                    print(result.articles.count)
                     complition(.success(result.articles))
                 } catch {
                     complition(.failure(error))
@@ -34,6 +34,10 @@ class NetworkService: NetworkServiceProtocol {
             }
             
         }.resume()
+    }
+    
+    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
 }

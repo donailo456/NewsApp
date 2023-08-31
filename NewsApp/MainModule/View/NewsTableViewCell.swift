@@ -14,7 +14,7 @@ class NewsTableViewCell: UITableViewCell {
     private let newsTitleLable: UILabel = {
        let label = UILabel()
         label.numberOfLines = 0
-        label.font = .systemFont(ofSize: 17, weight: .medium)
+        label.font = .systemFont(ofSize: 15, weight: .medium)
         return label
     }()
     private let subtitleLabel: UILabel = {
@@ -47,9 +47,9 @@ class NewsTableViewCell: UITableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         
-        newsTitleLable.frame = CGRect(x: 10, y: 0, width: contentView.frame.size.width - 170, height: 70)
-        subtitleLabel.frame = CGRect(x: 10, y: 70, width: contentView.frame.size.width - 170, height: contentView.frame.size.height/2)
-        newsImageView.frame = CGRect(x: contentView.frame.size.width-150, y: 15, width: 160, height: contentView.frame.size.height - 20)
+        newsTitleLable.frame = CGRect(x: 10, y: 0, width: 200, height: 70)
+        subtitleLabel.frame = CGRect(x: 10, y: 70, width: 200, height: 30)
+        newsImageView.frame = CGRect(x: contentView.frame.size.width - 170, y: 10, width: 160, height: contentView.frame.size.height - 20)
     }
     
     override func prepareForReuse() {
@@ -62,20 +62,20 @@ class NewsTableViewCell: UITableViewCell {
     func configure(with viewModel: Article?){
         
         newsTitleLable.text = viewModel?.title
-        subtitleLabel.text = viewModel?.publishedAt
+        subtitleLabel.text = viewModel?.description
         downloadImage(from: (URL(string: viewModel?.urlToImage ?? "") ?? URL(string: "0"))!)
         
     }
+    
+    //MARK: - downloadImage
     
     func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
         URLSession.shared.dataTask(with: url, completionHandler: completion).resume()
     }
     
     func downloadImage(from url: URL) {
-        print("Download Started")
         getData(from: url) { data, response, error in
             guard let data = data, error == nil else { return }
-            print(response?.suggestedFilename ?? url.lastPathComponent)
             DispatchQueue.main.async() { [weak self] in
                 self?.newsImageView.image = UIImage(data: data)
             }

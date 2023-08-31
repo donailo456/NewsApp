@@ -9,6 +9,7 @@ import Foundation
 
 protocol DetailViewProtocol: class {
     func setArticle(article: Article?)
+//    func 
 }
 
 protocol DetailViewPresenterProtocol: class {
