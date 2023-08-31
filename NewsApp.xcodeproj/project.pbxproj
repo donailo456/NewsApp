@@ -9,13 +9,23 @@
 /* Begin PBXBuildFile section */
 		E40209F92AA08D4B00ED5ADD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40209F82AA08D4B00ED5ADD /* AppDelegate.swift */; };
 		E40209FB2AA08D4B00ED5ADD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40209FA2AA08D4B00ED5ADD /* SceneDelegate.swift */; };
-		E40209FD2AA08D4B00ED5ADD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40209FC2AA08D4B00ED5ADD /* ViewController.swift */; };
+		E40209FD2AA08D4B00ED5ADD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40209FC2AA08D4B00ED5ADD /* MainViewController.swift */; };
 		E4020A002AA08D4B00ED5ADD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E40209FE2AA08D4B00ED5ADD /* Main.storyboard */; };
 		E4020A022AA08D4C00ED5ADD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4020A012AA08D4C00ED5ADD /* Assets.xcassets */; };
 		E4020A052AA08D4C00ED5ADD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4020A032AA08D4C00ED5ADD /* LaunchScreen.storyboard */; };
 		E4020A102AA08D4C00ED5ADD /* NewsAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A0F2AA08D4C00ED5ADD /* NewsAppTests.swift */; };
 		E4020A1A2AA08D4C00ED5ADD /* NewsAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A192AA08D4C00ED5ADD /* NewsAppUITests.swift */; };
 		E4020A1C2AA08D4C00ED5ADD /* NewsAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A1B2AA08D4C00ED5ADD /* NewsAppUITestsLaunchTests.swift */; };
+		E4020A2D2AA08DE200ED5ADD /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A2C2AA08DE200ED5ADD /* MainPresenter.swift */; };
+		E4020A2F2AA08E9800ED5ADD /* NewsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A2E2AA08E9800ED5ADD /* NewsModel.swift */; };
+		E4020A332AA08F7200ED5ADD /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A322AA08F7200ED5ADD /* NetworkService.swift */; };
+		E4020A362AA0922800ED5ADD /* RouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A352AA0922800ED5ADD /* RouterProtocol.swift */; };
+		E4020A382AA0924800ED5ADD /* AsselderModuleBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A372AA0924800ED5ADD /* AsselderModuleBuilder.swift */; };
+		E4020A3A2AA095B100ED5ADD /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4020A392AA095B100ED5ADD /* MainViewController.xib */; };
+		E4020A3C2AA09BBB00ED5ADD /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A3B2AA09BBB00ED5ADD /* NewsTableViewCell.swift */; };
+		E4020A402AA0AF4000ED5ADD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A3E2AA0AF4000ED5ADD /* DetailViewController.swift */; };
+		E4020A412AA0AF4000ED5ADD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4020A3F2AA0AF4000ED5ADD /* DetailViewController.xib */; };
+		E4020A452AA0AF5B00ED5ADD /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +49,7 @@
 		E40209F52AA08D4B00ED5ADD /* NewsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E40209F82AA08D4B00ED5ADD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E40209FA2AA08D4B00ED5ADD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E40209FC2AA08D4B00ED5ADD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		E40209FC2AA08D4B00ED5ADD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		E40209FF2AA08D4B00ED5ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4020A012AA08D4C00ED5ADD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4020A042AA08D4C00ED5ADD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +59,16 @@
 		E4020A152AA08D4C00ED5ADD /* NewsAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewsAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4020A192AA08D4C00ED5ADD /* NewsAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITests.swift; sourceTree = "<group>"; };
 		E4020A1B2AA08D4C00ED5ADD /* NewsAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E4020A2C2AA08DE200ED5ADD /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		E4020A2E2AA08E9800ED5ADD /* NewsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsModel.swift; sourceTree = "<group>"; };
+		E4020A322AA08F7200ED5ADD /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		E4020A352AA0922800ED5ADD /* RouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterProtocol.swift; sourceTree = "<group>"; };
+		E4020A372AA0924800ED5ADD /* AsselderModuleBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsselderModuleBuilder.swift; sourceTree = "<group>"; };
+		E4020A392AA095B100ED5ADD /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
+		E4020A3B2AA09BBB00ED5ADD /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		E4020A3E2AA0AF4000ED5ADD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		E4020A3F2AA0AF4000ED5ADD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +121,11 @@
 			children = (
 				E40209F82AA08D4B00ED5ADD /* AppDelegate.swift */,
 				E40209FA2AA08D4B00ED5ADD /* SceneDelegate.swift */,
-				E40209FC2AA08D4B00ED5ADD /* ViewController.swift */,
+				E4020A372AA0924800ED5ADD /* AsselderModuleBuilder.swift */,
+				E4020A342AA0921500ED5ADD /* Router */,
+				E4020A3D2AA0AF1200ED5ADD /* DetailModule */,
+				E4020A282AA08D8F00ED5ADD /* MainModule */,
+				E4020A312AA08F5700ED5ADD /* NetworkService */,
 				E40209FE2AA08D4B00ED5ADD /* Main.storyboard */,
 				E4020A012AA08D4C00ED5ADD /* Assets.xcassets */,
 				E4020A032AA08D4C00ED5ADD /* LaunchScreen.storyboard */,
@@ -125,6 +149,84 @@
 				E4020A1B2AA08D4C00ED5ADD /* NewsAppUITestsLaunchTests.swift */,
 			);
 			path = NewsAppUITests;
+			sourceTree = "<group>";
+		};
+		E4020A282AA08D8F00ED5ADD /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A2B2AA08DB400ED5ADD /* Model */,
+				E4020A292AA08D9E00ED5ADD /* Presenter */,
+				E4020A2A2AA08DAA00ED5ADD /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		E4020A292AA08D9E00ED5ADD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A2C2AA08DE200ED5ADD /* MainPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E4020A2A2AA08DAA00ED5ADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E40209FC2AA08D4B00ED5ADD /* MainViewController.swift */,
+				E4020A3B2AA09BBB00ED5ADD /* NewsTableViewCell.swift */,
+				E4020A392AA095B100ED5ADD /* MainViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4020A2B2AA08DB400ED5ADD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A2E2AA08E9800ED5ADD /* NewsModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		E4020A312AA08F5700ED5ADD /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A322AA08F7200ED5ADD /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		E4020A342AA0921500ED5ADD /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A352AA0922800ED5ADD /* RouterProtocol.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		E4020A3D2AA0AF1200ED5ADD /* DetailModule */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A432AA0AF4F00ED5ADD /* Presenter */,
+				E4020A422AA0AF4400ED5ADD /* View */,
+			);
+			path = DetailModule;
+			sourceTree = "<group>";
+		};
+		E4020A422AA0AF4400ED5ADD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A3E2AA0AF4000ED5ADD /* DetailViewController.swift */,
+				E4020A3F2AA0AF4000ED5ADD /* DetailViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E4020A432AA0AF4F00ED5ADD /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +335,9 @@
 			files = (
 				E4020A052AA08D4C00ED5ADD /* LaunchScreen.storyboard in Resources */,
 				E4020A022AA08D4C00ED5ADD /* Assets.xcassets in Resources */,
+				E4020A412AA0AF4000ED5ADD /* DetailViewController.xib in Resources */,
 				E4020A002AA08D4B00ED5ADD /* Main.storyboard in Resources */,
+				E4020A3A2AA095B100ED5ADD /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +362,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E40209FD2AA08D4B00ED5ADD /* ViewController.swift in Sources */,
+				E40209FD2AA08D4B00ED5ADD /* MainViewController.swift in Sources */,
+				E4020A362AA0922800ED5ADD /* RouterProtocol.swift in Sources */,
 				E40209F92AA08D4B00ED5ADD /* AppDelegate.swift in Sources */,
 				E40209FB2AA08D4B00ED5ADD /* SceneDelegate.swift in Sources */,
+				E4020A452AA0AF5B00ED5ADD /* DetailPresenter.swift in Sources */,
+				E4020A2F2AA08E9800ED5ADD /* NewsModel.swift in Sources */,
+				E4020A332AA08F7200ED5ADD /* NetworkService.swift in Sources */,
+				E4020A382AA0924800ED5ADD /* AsselderModuleBuilder.swift in Sources */,
+				E4020A402AA0AF4000ED5ADD /* DetailViewController.swift in Sources */,
+				E4020A2D2AA08DE200ED5ADD /* MainPresenter.swift in Sources */,
+				E4020A3C2AA09BBB00ED5ADD /* NewsTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
