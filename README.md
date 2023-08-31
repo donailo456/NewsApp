@@ -16,9 +16,9 @@
 # Для запуска
   1. Для запуска проекта можно скачать исходный zip-файл или применить в Xcode Swift Package Manager
 
-  HTTPS: ```https://github.com/donailo456/Avito.git```
+  HTTPS: ```https://github.com/donailo456/NewsApp.git``
   
-  SSH: ```git@github.com:donailo456/Avito.git```
+  SSH: ```git@github.com:donailo456/NewsApp.git```
 
   2. Откройте файл "avito.xcodeproj"
   3. Сбилдите и запустите проект в Xcode
