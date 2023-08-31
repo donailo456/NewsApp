@@ -26,6 +26,8 @@
 		E4020A402AA0AF4000ED5ADD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A3E2AA0AF4000ED5ADD /* DetailViewController.swift */; };
 		E4020A412AA0AF4000ED5ADD /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E4020A3F2AA0AF4000ED5ADD /* DetailViewController.xib */; };
 		E4020A452AA0AF5B00ED5ADD /* DetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */; };
+		E4020A4A2AA0C0C300ED5ADD /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A492AA0C0C300ED5ADD /* MainPresenterTest.swift */; };
+		E4020A4C2AA0C29200ED5ADD /* RouterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4020A4B2AA0C29200ED5ADD /* RouterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		E4020A3E2AA0AF4000ED5ADD /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		E4020A3F2AA0AF4000ED5ADD /* DetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPresenter.swift; sourceTree = "<group>"; };
+		E4020A492AA0C0C300ED5ADD /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		E4020A4B2AA0C29200ED5ADD /* RouterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,6 +141,7 @@
 		E4020A0E2AA08D4C00ED5ADD /* NewsAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				E4020A462AA0C06800ED5ADD /* TestMainModule */,
 				E4020A0F2AA08D4C00ED5ADD /* NewsAppTests.swift */,
 			);
 			path = NewsAppTests;
@@ -227,6 +232,15 @@
 				E4020A442AA0AF5B00ED5ADD /* DetailPresenter.swift */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		E4020A462AA0C06800ED5ADD /* TestMainModule */ = {
+			isa = PBXGroup;
+			children = (
+				E4020A492AA0C0C300ED5ADD /* MainPresenterTest.swift */,
+				E4020A4B2AA0C29200ED5ADD /* RouterTest.swift */,
+			);
+			path = TestMainModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -381,6 +395,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4020A102AA08D4C00ED5ADD /* NewsAppTests.swift in Sources */,
+				E4020A4C2AA0C29200ED5ADD /* RouterTest.swift in Sources */,
+				E4020A4A2AA0C0C300ED5ADD /* MainPresenterTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

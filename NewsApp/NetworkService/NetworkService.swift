@@ -9,7 +9,6 @@ import Foundation
 
 protocol NetworkServiceProtocol {
     func getNews(complition: @escaping (Result<[Article]?, Error>) -> Void)
-    func getData(from url: URL, completion: @escaping (Data?, URLResponse?, Error?) -> ())
 }
 
 class NetworkService: NetworkServiceProtocol {
